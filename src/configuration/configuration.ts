@@ -82,7 +82,7 @@ class Configuration implements IConfiguration {
     // Disable forin rule here as we make accessors enumerable.`
     for (const option in this) {
       const val = vimConfigs[option] as any;
-      if (val !== null && val !== undefined) {
+      if (val) {
         this[option] = val;
       }
     }

@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 
-import { IConfiguration, IKeyRemapping } from '../src/configuration/iconfiguration';
+import { IConfiguration, IKeyRemapping, IAutoSwitchInputMethod } from '../src/configuration/iconfiguration';
 
 export class Configuration implements IConfiguration {
   useSystemClipboard = false;
@@ -25,7 +25,7 @@ export class Configuration implements IConfiguration {
   easymotionMarkerFontWeight = 'normal';
   easymotionMarkerYOffset = 0;
   easymotionKeys = 'hklyuiopnm,qwertzxcvbasdgjf;';
-  autoSwitchInputMethod = {
+  autoSwitchInputMethod : IAutoSwitchInputMethod = {
     enable: false,
     defaultIM: '',
     switchIMCmd: '',
